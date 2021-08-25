@@ -9,9 +9,9 @@
     <h1>todocrud</h1>
     <h3>add</h3>
     <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
-        <input type="text" id="firstname" placeholder="New to-do">
-        <input type="text" id="lastname" placeholder="New to-do" />
-        <input type="submit" value="add" />
+        <input class="form1" type="text" id="firstname" placeholder="Imie">
+        <input class="form2" type="text" id="lastname" placeholder="Nazwisko" />
+        <input class="button" type="submit" value="Wyślij" />
     </form>
 
     <div id="spoiler">
@@ -31,8 +31,9 @@
     <table>
         <tr>
             <th>Is Complete</th>
-            <th>firstname</th>
-            <th>lastname</th>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th></th>
             <th></th>
         </tr>
         <tbody id="todos"></tbody>

@@ -28,6 +28,9 @@ namespace WebApplication12
             services.AddDbContext<TodoContext>(opt =>
             opt.UseInMemoryDatabase("TodoList"));
             services.AddControllers();
+            services.AddMvc(option => option.EnableEndpointRouting = false);
+            services.AddOptions();
+           
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -44,7 +47,7 @@ namespace WebApplication12
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseHttpsRedirection();
-            //app.UseMvc();
+            app.UseMvc();
         }
     }
 }

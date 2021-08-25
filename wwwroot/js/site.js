@@ -9,13 +9,15 @@ function getItems() {
 }
 
 function addItem() {
-    const addNameTextbox = document.getElementById('add-name');
+    const addNameTextbox = document.getElementById('firstname');
+    const addLastnameTextbox = document.getElementById('lastname');
 
     const item = {
         isComplete: false,
         firstname: addNameTextbox.value.trim(),
-        lastname: addNameTextbox.value.trim()
+        lastname: addLastnameTextbox.value.trim()
     };
+
 
     fetch(uri, {
         method: 'POST',
@@ -25,7 +27,7 @@ function addItem() {
         },
         body: JSON.stringify(item)
     })
-        .then(response => response.json())
+        .then(response => response.text())
         .then(() => {
             getItems();
             addNameTextbox.value = '';
@@ -118,10 +120,14 @@ function _displayItems(data) {
         td2.appendChild(textNode);
 
         let td3 = tr.insertCell(2);
-        td3.appendChild(editButton);
+        let textNode = document.createTextNode(item.name);
+        td3.appendChild(textNode);
 
         let td4 = tr.insertCell(3);
-        td4.appendChild(deleteButton);
+        td4.appendChild(editButton);
+
+        let td5 = tr.insertCell(4);
+        td5.appendChild(deleteButton);
     });
 
     todos = data;

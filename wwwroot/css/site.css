@@ -21,3 +21,17 @@ td {
     border: 1px solid;
     padding: 5px;
 }
+
+#firstname.form1, #lastname.form2 {
+    border: 3px solid black;
+    position: relative;
+}
+
+.form1 {
+    display: flex;
+    margin: 0px 0px 10px 0px;
+}
+
+.button {
+    border: 2px solid black
+}
