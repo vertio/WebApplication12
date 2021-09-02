@@ -31,6 +31,7 @@ function addItem() {
         .then(() => {
             getItems();
             addNameTextbox.value = '';
+
         })
         .catch(error => console.error('Unable to add item.', error));
 }
@@ -113,15 +114,17 @@ function _displayItems(data) {
         let tr = tBody.insertRow();
 
         let td1 = tr.insertCell(0);
-        td1.appendChild(isCompleteCheckbox);
+        let idtextnode = document.createTextNode(item.id);
+        td1.appendChild(idtextnode);
+        
 
         let td2 = tr.insertCell(1);
-        let textNode = document.createTextNode(item.name);
+        let textNode = document.createTextNode(item.firstname);
         td2.appendChild(textNode);
 
         let td3 = tr.insertCell(2);
-        let textNode = document.createTextNode(item.name);
-        td3.appendChild(textNode);
+        let textNode2 = document.createTextNode(item.lastname);
+        td3.appendChild(textNode2);
 
         let td4 = tr.insertCell(3);
         td4.appendChild(editButton);
