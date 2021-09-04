@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <title>todocrud</title>
-    <link rel="stylesheet" type="text/css" href="css/site.css" />
+    <link rel="stylesheet" type="text/css" href="css/osoba.css" />
 </head>
 <body>
+
+    <!--add box--> 
+
     <h1>todocrud</h1>
     <h3>add</h3>
     <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
@@ -13,6 +16,9 @@
         <input class="form2" type="text" id="lastname" placeholder="Nazwisko" />
         <input class="button" type="submit" value="Wyślij" />
     </form>
+
+
+    <!--edit box--> 
 
     <div id="spoiler">
         <h3>edit</h3>
@@ -30,9 +36,10 @@
 
     <table>
         <tr>
-            <th>Is Complete</th>
+            <th>Pozycja</th>
             <th>Imie</th>
             <th>Nazwisko</th>
+            <th></th>
             <th></th>
             
         </tr>

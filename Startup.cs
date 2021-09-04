@@ -28,6 +28,9 @@ namespace WebApplication12
             services.AddDbContext<TodoContext>(opt =>
             opt.UseInMemoryDatabase("TodoList"));
             services.AddControllers();
+
+            // add to useMVC
+
             services.AddMvc(option => option.EnableEndpointRouting = false);
             services.AddOptions();
            

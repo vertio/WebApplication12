@@ -8,6 +8,8 @@ function getItems() {
         .catch(error => console.error('Unable to get items.', error));
 }
 
+// function adding elements
+
 function addItem() {
     const addNameTextbox = document.getElementById('firstname');
     const addLastnameTextbox = document.getElementById('lastname');
@@ -36,6 +38,8 @@ function addItem() {
         .catch(error => console.error('Unable to add item.', error));
 }
 
+// function removing items
+
 function deleteItem(id) {
     fetch(`${uri}/${id}`, {
         method: 'DELETE'
@@ -53,6 +57,8 @@ function displayEditForm(id) {
     document.getElementById('edit-isComplete').checked = item.isComplete;
     document.getElementById('editForm').style.display = 'block';
 }
+
+// function update items
 
 function updateItem() {
     const itemId = document.getElementById('edit-id').value;
@@ -88,6 +94,9 @@ function _displayCount(itemCount) {
 
     document.getElementById('counter').innerText = `${itemCount} ${firstname} ${lastname}`;
 }
+
+
+// adding items to the table
 
 function _displayItems(data) {
     const tBody = document.getElementById('todos');
