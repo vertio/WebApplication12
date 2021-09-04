@@ -1,4 +1,4 @@
-# Wyższa Szkoła Bankowa Advanced Programming - labor 3
+# Wyższa Szkoła Bankowa Advanced Programming - labor 3 Krzysztof Drzewiecki 114939 gr23_inf_nw4 
 
 
 1. Rzeczy na który należy zwracać uwagę:
